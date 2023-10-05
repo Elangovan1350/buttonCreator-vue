@@ -7,7 +7,7 @@ const radius = ref("0");
 const border = ref("0");
 const bgcolor = ref("");
 const fncolor = ref("");
-
+const fontweight =ref("1")
 const font = ref("16")
 
 const button = reactive({
@@ -27,6 +27,7 @@ const button = reactive({
           borderWidth: border + 'px',
           fontSize:font+'px',
           color:fncolor,
+          fontWeight:fontweight+'00'
         }"
       >
         {{ button.name }}
@@ -95,6 +96,17 @@ const button = reactive({
       <label for=""
         >font color:
         <input type="color" name="" id="" v-model="fncolor" />
+      </label>
+      <label for=""
+        >font weight :
+        <input
+          type="range"
+          name="size"
+          id="size"
+          min="1"
+          max="9"
+          v-model="fontweight"
+        />
       </label>
       <label for=""
         >background color:
